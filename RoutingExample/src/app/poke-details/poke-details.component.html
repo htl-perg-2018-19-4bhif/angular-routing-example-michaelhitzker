@@ -1,0 +1,11 @@
+<div class='container'>
+  <button mat-button routerLink='/pokemons/'>
+    <mat-icon>keyboard_arrow_left</mat-icon>BACK
+  </button><br>
+  <img src="{{pokemon.imgUrl}}" />
+  <h1>{{pokemon.name}}</h1>
+  <h4>Abilities: </h4>
+  <mat-list>
+    <mat-list-item *ngFor='let ability of pokemon.abilities'>{{ability}}</mat-list-item>
+  </mat-list>
+</div>

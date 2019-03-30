@@ -1,0 +1,22 @@
+<mat-form-field>
+  <span matPrefix><mat-icon>search</mat-icon> &nbsp;</span>
+  <input matInput (keyup)="search($event.target.value)">
+</mat-form-field>
+<table mat-table [dataSource]='dataSource'>
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let pokemon" class='pokemonID'> {{pokemon.id}} </td>
+  </ng-container>
+  <ng-container matColumnDef="img">
+    <th mat-header-cell *matHeaderCellDef> Image </th>
+    <td mat-cell *matCellDef="let pokemon" class='pokemonImg'><img
+        src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemon.id}}.png' /></td>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let pokemon"> <a routerLink='/pokemons/{{pokemon.id}}'>{{pokemon.name}}</a></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

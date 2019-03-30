@@ -1,0 +1,22 @@
+mat-list-item{
+    height: 30px !important;
+}
+
+h4{
+    margin-bottom: 5px;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+button{
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.container{
+    margin: 10px;
+}
+
